@@ -1,0 +1,26 @@
+<html>
+<head>
+</head>
+<body>
+
+<a href="/on"><input type="button" name="ledOn" id="ledOn" value="on"></a>
+<a href="/off"><input type="button" name="ledOff" id="ledOff" value="off"></a>
+
+<br />
+<div style="text-align: center; margin: 0 auto;">
+  <img src="./img.jpg" width="300" height="300">
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+
+<script>
+  var socket = io.connect('http://localhost:3000');
+  socket.on('value', function (data) {
+    console.log(data);
+    // $('img').first().attr('style', '-webkit-transform: skew('+data.pmeterScewValue+'deg) rotate('+data.pmeterValue+'deg);');
+    console.log($('img'));
+    $('img').first().attr('style', '-webkit-transform: skew('+data.pmeterValue+'deg, '+data.pmeterScewValue+'deg);');
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "ArduinotoNode.js",
+  "version": "1.0.0",
+  "description": "Arduino to Node.js",
+  "homepage": "https://jenstitterness.com/",
+  "author": "Jens Titterness <jenstitterness@gmail.com>",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "scripts": {
+    "start": "node server"
+  },
+  "dependencies": {
+    "express": "3.5.1",
+    "socket.io": "0.9.16",
+    "johnny-five": "0.7.30"
+  },
+  "private": true
+}
